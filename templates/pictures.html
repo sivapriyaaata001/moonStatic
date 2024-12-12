@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stars</title>
+</head>
+<style>
+    .moon{
+        position: absolute;
+        top: 300px;
+        left: 300px;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: white;
+        opacity: 1.5;
+        box-shadow: 0px 0px 40px yellow;
+        z-index: 1;
+    }
+    .stars, .twinkl{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    .stars{
+    background-color: #000 url(https://th.bing.com/th/id/OIP.uzh-WhKW0c0EhUDCO1YzxQHaFj?w=249&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7) repeat top center;
+    z-index: 0;
+    background-size: cover;
+    }
+   .twinkl{
+    background: transparent url(https://th.bing.com/th/id/OIP.uzh-WhKW0c0EhUDCO1YzxQHaFj?w=249&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7) repeat top center;
+    z-index: 0;
+    -moz-animation: move-twink-back 200s linear infinite;
+    -ms-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite;
+    animation: move-twink-back 200s linear infinite;
+    background-size: cover;
+
+   }
+   @keyframes move-twink-back {
+    from{
+        background-position: 6;
+    }
+    to{
+        background-position: 10000px 5000px;
+    }
+
+   }
+</style>
+<body>
+    <div>
+        <div class="stars"></div>
+        <div class="moon"></div>
+        <div class="twinkl"></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/h1.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>pictures</h1>
+        <img src="{% static 'images/Sai-pallavi.jpg' %}" alt="">
+    </center>
+</body>
+</html>-->
